@@ -37,7 +37,7 @@ SPDX-License-Identifier: AGPL-3.0
 
 ### Elements of a Secure Development Process
 
-**Primary purpose**: Analysis of the data flow; data is both protected by the GDPR and represents value of the coporation
+**Primary purpose**: Analysis of the data flow; data is both protected by the GDPR and represents value of the corportation
 
 - **Requirements**
   - Security-Requirements
@@ -73,3 +73,41 @@ SPDX-License-Identifier: AGPL-3.0
 - **Level 1**: Direct support with customers; call center, non-technical
 - **Level 2**: People who know about typical problems with the software
 - **Level 3**: Developers of the software
+
+## Basics
+
+### What is Secure Software?
+
+- Software which is protected against intentional attacks
+- Every participant in the software development process should be interested in this objective
+- Software must be hardened against all known attacks (and future, unknown attacks)
+
+### What is Security?
+
+- $Risk = \frac{Cost\ of\ breach}{Probability\ of\ breach}$
+- A system is protected against threats compromising valuable data using measures which lead to a reduced, accepted risk.
+- Accepted risk is defined by context of use (i.e. nuclear power: very low accepted risks)
+- **Safety**: Protection of the environment from the functional effects a system
+- **Security**: Protection of the system from threats from the environment
+- Concrete definitions: [uni-itsec-notes#security-objectives](https://pojntfx.github.io/uni-itsec-notes/main.md.html#security-objectives); most importantly ("CIA objectives"):
+  - Confidentiality
+  - Integrity
+  - Availability
+- If there are contractions between the security objectives (anonymity vs. accountability): The context defines which objectives dominate over others
+
+### CISSP Domains/Certificates
+
+- **Security Engineering**: Engineering and Management of Security
+- **Security Assessment and Testing**: Designing, Performing and Analyzing Security Testing
+- **Security Operations**: Foundational Concepts, Investigations, Incident Management and Disaster Recovery
+- **Software Development Security**: Understanding, Applying and Enforcing Software Security
+- → This course strives for 80% of TPSSE compliance
+
+### Why Security?
+
+- Security is context dependent: On `localhost` and unprotected UNIX socket isn't an issue, but forward it with `socat` and it becomes a massive security vulnerability!
+- With every change every test needs to be run again (regression testing)
+- Typically ~30 errors in every 1000 lines of code
+- Growing application complexity
+- Devices are more and more connected which reduces the need for physical access
+- Extensible architectures
