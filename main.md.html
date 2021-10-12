@@ -190,6 +190,12 @@
 <li><a href="#what-is-security"><span class="toc-section-number">1.4.2</span> What is Security?</a></li>
 <li><a href="#cissp-domainscertificates"><span class="toc-section-number">1.4.3</span> CISSP Domains/Certificates</a></li>
 <li><a href="#why-security"><span class="toc-section-number">1.4.4</span> Why Security?</a></li>
+<li><a href="#common-terms"><span class="toc-section-number">1.4.5</span> Common Terms</a></li>
+<li><a href="#threat-agents"><span class="toc-section-number">1.4.6</span> Threat Agents</a></li>
+<li><a href="#researching-vulnerabilities"><span class="toc-section-number">1.4.7</span> Researching Vulnerabilities</a></li>
+<li><a href="#cvss-metrics"><span class="toc-section-number">1.4.8</span> CVSS Metrics</a></li>
+<li><a href="#balancing-security"><span class="toc-section-number">1.4.9</span> Balancing Security</a></li>
+<li><a href="#finishing-thoughts"><span class="toc-section-number">1.4.10</span> Finishing Thoughts</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -304,6 +310,89 @@
 <li>Growing application complexity</li>
 <li>Devices are more and more connected which reduces the need for physical access</li>
 <li>Extensible architectures</li>
+</ul>
+<h3 data-number="1.4.5" id="common-terms"><span class="header-section-number">1.4.5</span> Common Terms</h3>
+<ul>
+<li>Exploit/Proof of Concept</li>
+<li>Attack</li>
+<li>Vulnerability</li>
+<li>Threat</li>
+<li>Error</li>
+</ul>
+<ol type="1">
+<li>Threat agent gives rise to threat</li>
+<li>Threat exploits vulnerability</li>
+<li>Vulnerability leads to risk</li>
+<li>Risk can damage asset and causes exposure</li>
+<li>Exposure can be countermeasured by a safeguard</li>
+<li>Safeguard directly affects threat agent</li>
+</ol>
+<h3 data-number="1.4.6" id="threat-agents"><span class="header-section-number">1.4.6</span> Threat Agents</h3>
+<ul>
+<li>Virus (i.e. infection)</li>
+<li>Hacker (i.e. unauthorized access)</li>
+<li>User (i.e. wrong config, data loss)</li>
+<li>Fire (i.e. damage to computers)</li>
+<li>Worker (i.e. leaking)</li>
+<li>Other corporations (i.e. industrial espionage)</li>
+<li>Black hats (i.e. buffer overflows, DoS)</li>
+<li>Intruders (i.e. physically stealing drives)</li>
+</ul>
+<h3 data-number="1.4.7" id="researching-vulnerabilities"><span class="header-section-number">1.4.7</span> Researching Vulnerabilities</h3>
+<ul>
+<li>Classifying vulnerabilities by severity (low, middle, high)</li>
+<li>Classifying vulnerabilities by exploit range (local or remote)</li>
+<li>Intents to find trends and attacks</li>
+<li>Intents to find vulnerabilities before they can be exploited</li>
+<li>Intents to find countermeasures</li>
+</ul>
+<h3 data-number="1.4.8" id="cvss-metrics"><span class="header-section-number">1.4.8</span> CVSS Metrics</h3>
+<p>Results in a number which can be used to classify the vulnerability.</p>
+<ul>
+<li><strong>Base Score Metrics</strong>
+<ul>
+<li><strong>Exploitabilility Metrics</strong>
+<ul>
+<li><strong>AV: Attack Vector</strong>: Network, Adjacent Network, Local, Physical</li>
+<li><strong>AC: Attack Complexity</strong>: Low, High</li>
+<li><strong>PR: Privileges Required</strong>: None, Low, High</li>
+<li><strong>UI: User Interaction</strong>: None, Required</li>
+<li><strong>S: Scope</strong>: Unchanged, Change</li>
+</ul></li>
+<li><strong>Impact Metrics (CIA Metrics)</strong>
+<ul>
+<li><strong>C: Confidentiality Impact</strong>: None, Low, High</li>
+<li><strong>I: Integrity Impact</strong>: None, Low, High</li>
+<li><strong>A: Availability Impact</strong>: None, Low, High</li>
+</ul></li>
+</ul></li>
+<li><strong>Temporal Score Metrics</strong>
+<ul>
+<li><strong>E: Exploit Code Maturity</strong>: Not defined, unproven that exploit exists, proof of concept code, functional exploit exists, high</li>
+<li><strong>RL: Remediation Level</strong>: Not defined, official fix, temporary fix, workaround, unavailable</li>
+<li><strong>RC: Report Confidence</strong>: Not defined, unknown, reasonable, confirmed</li>
+</ul></li>
+<li><strong>Environmental Score Metrics</strong>: Extends base score metrics, but are specific to exploited organization
+<ul>
+<li><strong>Impact Subscore Modifiers</strong>
+<ul>
+<li><strong>CR: Confidentiality Requirement</strong>: Not defined, low, medium, high</li>
+<li><strong>IR: Integrity Requirement</strong>: Not defined, low, medium, high</li>
+<li><strong>AR: Availability Requirement</strong>: Not defined, low, medium, high</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 data-number="1.4.9" id="balancing-security"><span class="header-section-number">1.4.9</span> Balancing Security</h3>
+<ul>
+<li>Security is always a balance between functionality and usability</li>
+<li>Security often means to have restrictions in terms of features</li>
+</ul>
+<h3 data-number="1.4.10" id="finishing-thoughts"><span class="header-section-number">1.4.10</span> Finishing Thoughts</h3>
+<ul>
+<li>Systems are only secure if all elements of the system are secure</li>
+<li>Perimeter and infrastructure security can not make the entire system secure</li>
+<li>Applications are always connected</li>
+<li>Development of secure systems is not a choice, but a must!</li>
 </ul>
 </body>
 </html>
