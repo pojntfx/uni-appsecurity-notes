@@ -176,6 +176,15 @@ Results in a number which can be used to classify the vulnerability.
 - Security is always a balance between functionality and usability
 - Security often means to have restrictions in terms of features
 
+### Writing Secure Software
+
+- Many sections
+  - Secure development practices
+  - Secure development process (supply chain security)
+  - Security reviews
+  - Pentesting
+- Time and money should be invested into all sections according to individual risk, not only into a singular section
+
 ### Finishing Thoughts
 
 - Systems are only secure if all elements of the system are secure
