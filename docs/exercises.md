@@ -47,6 +47,7 @@ SPDX-License-Identifier: AGPL-3.0
   - Non-Repudiation
   - Privacy
 - Es gibt zwischen den Sicherheitskriterien fast immer Spannungen (i.e. Non-Repudiation vs. Privacy)
+- "A system is protected against threats compromising valuable data using measures which lead to a reduced, accepted risk."
 
 **Wodurch unterscheidet sich dieser Begriff (security) von der Funktionssicherheit (engl. safety)?**
 
@@ -61,7 +62,7 @@ SPDX-License-Identifier: AGPL-3.0
 
 **Was ist der Unterschied zwischen einem Exploit und einem Proof-of-Concept (PoC)?**
 
-- Proof-of-Concept: Ein Konzept eines Exploits, welches z.B. der Demonstration einer Schwachstelle dient
+- Proof-of-Concept: Ein Konzept eines Exploits, welches z.B. der Demonstration einer Schwachstelle dient - ohne Schaden anzurichten
 - Exploit: I.e. Software, welche bewusst eine Schwachstelle ausnutzt
 - Temporal Score Metrics/Exploit Code Maturity bewertet z.B. einen Proof-of-Concept geringer als einen funktionieren Exploit
 
