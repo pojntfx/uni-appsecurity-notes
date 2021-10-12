@@ -111,3 +111,74 @@ SPDX-License-Identifier: AGPL-3.0
 - Growing application complexity
 - Devices are more and more connected which reduces the need for physical access
 - Extensible architectures
+
+### Common Terms
+
+- Exploit/Proof of Concept
+- Attack
+- Vulnerability
+- Threat
+- Error
+
+1. Threat agent gives rise to threat
+2. Threat exploits vulnerability
+3. Vulnerability leads to risk
+4. Risk can damage asset and causes exposure
+5. Exposure can be countermeasured by a safeguard
+6. Safeguard directly affects threat agent
+
+### Threat Agents
+
+- Virus (i.e. infection)
+- Hacker (i.e. unauthorized access)
+- User (i.e. wrong config, data loss)
+- Fire (i.e. damage to computers)
+- Worker (i.e. leaking)
+- Other corporations (i.e. industrial espionage)
+- Black hats (i.e. buffer overflows, DoS)
+- Intruders (i.e. physically stealing drives)
+
+### Researching Vulnerabilities
+
+- Classifying vulnerabilities by severity (low, middle, high)
+- Classifying vulnerabilities by exploit range (local or remote)
+- Intents to find trends and attacks
+- Intents to find vulnerabilities before they can be exploited
+- Intents to find countermeasures
+
+### CVSS Metrics
+
+Results in a number which can be used to classify the vulnerability.
+
+- **Base Score Metrics**
+  - **Exploitabilility Metrics**
+    - **AV: Attack Vector**: Network, Adjacent Network, Local, Physical
+    - **AC: Attack Complexity**: Low, High
+    - **PR: Privileges Required**: None, Low, High
+    - **UI: User Interaction**: None, Required
+    - **S: Scope**: Unchanged, Change
+  - **Impact Metrics (CIA Metrics)**
+    - **C: Confidentiality Impact**: None, Low, High
+    - **I: Integrity Impact**: None, Low, High
+    - **A: Availability Impact**: None, Low, High
+- **Temporal Score Metrics**
+  - **E: Exploit Code Maturity**: Not defined, unproven that exploit exists, proof of concept code, functional exploit exists, high
+  - **RL: Remediation Level**: Not defined, official fix, temporary fix, workaround, unavailable
+  - **RC: Report Confidence**: Not defined, unknown, reasonable, confirmed
+- **Environmental Score Metrics**: Extends base score metrics, but are specific to exploited organization
+  - **Impact Subscore Modifiers**
+    - **CR: Confidentiality Requirement**: Not defined, low, medium, high
+    - **IR: Integrity Requirement**: Not defined, low, medium, high
+    - **AR: Availability Requirement**: Not defined, low, medium, high
+
+### Balancing Security
+
+- Security is always a balance between functionality and usability
+- Security often means to have restrictions in terms of features
+
+### Finishing Thoughts
+
+- Systems are only secure if all elements of the system are secure
+- Perimeter and infrastructure security can not make the entire system secure
+- Applications are always connected
+- Development of secure systems is not a choice, but a must!
