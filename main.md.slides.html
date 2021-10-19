@@ -300,5 +300,107 @@ Felicitas Pojtinger
 </ul>
 </div>
 
+<div id="web-application-security" class="title-slide slide section level2" number="1.5">
+<h1><span class="header-section-number">1.5</span> Web Application Security</h1>
+
+</div>
+<div id="legal-notes" class="slide section level3" number="1.5.1">
+<h1><span class="header-section-number">1.5.1</span> Legal notes</h1>
+<ul>
+<li>Unauthorized breach of security systems is illegal</li>
+<li>Unauthorized eavesdropping is illegal</li>
+<li>Distribution or usage of “hacking tools” is illegal (which has however been relativized by judges)</li>
+</ul>
+</div>
+<div id="components-of-web-environments" class="slide section level3" number="1.5.2">
+<h1><span class="header-section-number">1.5.2</span> Components of Web Environments</h1>
+<ul>
+<li>Web server (no business logic, static content)</li>
+<li>App server (business logic, Tomcat etc.)</li>
+<li>Databases</li>
+<li>Middleware</li>
+<li>LDAP</li>
+<li>Reverse Proxies</li>
+<li>Web Application Firewalls</li>
+<li>Load Balancers</li>
+<li>Firewalls</li>
+</ul>
+</div>
+<div id="targets" class="slide section level3" number="1.5.3">
+<h1><span class="header-section-number">1.5.3</span> Targets</h1>
+<ul>
+<li>Browser</li>
+<li>Transport</li>
+<li>Web server</li>
+<li>Web application</li>
+<li>Backend</li>
+<li>Network components</li>
+<li>Partner connections (i.e. Sentry, Monitoring etc.)</li>
+</ul>
+</div>
+<div id="risks-in-the-layered-architecture" class="slide section level3" number="1.5.4">
+<h1><span class="header-section-number">1.5.4</span> Risks in the Layered Architecture</h1>
+<ul>
+<li>Client presentation layer: Validation</li>
+<li>Browser: Browser sandboxing etc.</li>
+<li>Encryption in transport</li>
+<li>Server presentation layer: Input &amp; output validation</li>
+<li>Logging: Auditing</li>
+<li>Error handling: Secure error escalation</li>
+<li>All layers: Authorization &amp; authentication checks</li>
+<li>Encryption to database</li>
+<li>Data protection in database</li>
+</ul>
+</div>
+<div id="methods-to-find-vulnerabilities" class="slide section level3" number="1.5.5">
+<h1><span class="header-section-number">1.5.5</span> Methods to find Vulnerabilities</h1>
+<ul>
+<li><strong>Security audit</strong>
+<ul>
+<li>Checks if previously established security guidelines have been implemented</li>
+<li>Assessment of configuration</li>
+</ul></li>
+<li><strong>Vulnerability assessment</strong>
+<ul>
+<li>Scans for known vulnerabilities</li>
+<li>Can point in directions, but not show concrete exploits</li>
+</ul></li>
+<li><strong>Pentesting</strong>
+<ul>
+<li>Security audit and vulnerability assessment is included</li>
+<li>Shows how vulnerabilities can be exploited</li>
+</ul></li>
+</ul>
+</div>
+<div id="pentesting-process" class="slide section level3" number="1.5.6">
+<h1><span class="header-section-number">1.5.6</span> Pentesting Process</h1>
+<ol style="list-style-type: decimal">
+<li><strong>Pre-Attack Phase</strong>
+<ol style="list-style-type: decimal">
+<li>Rules of engagement must be noted in a contract</li>
+<li>Customer’s requirements need to be queried</li>
+<li>Enumeration
+<ol style="list-style-type: decimal">
+<li>Passive: Enumerating without having access to client’s network</li>
+<li>Active: Scanning</li>
+</ol></li>
+</ol></li>
+<li><strong>Attack Phase</strong>:
+<ol style="list-style-type: decimal">
+<li>Perimeter breach</li>
+<li>Access</li>
+<li>Exploit/privilege escalation</li>
+<li>Keeping access</li>
+<li>Removing all traces</li>
+</ol></li>
+<li><strong>Post-Attack Phase</strong>:
+<ol style="list-style-type: decimal">
+<li>Restoring the pre-attack state</li>
+<li>Writing the report</li>
+<li>Posting recommendations on how to continue (i.e. fixing the vulnerabilities)</li>
+</ol></li>
+</ol>
+</div>
+
 </body>
 </html>
