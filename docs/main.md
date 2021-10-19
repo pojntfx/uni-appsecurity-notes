@@ -191,3 +191,76 @@ Results in a number which can be used to classify the vulnerability.
 - Perimeter and infrastructure security can not make the entire system secure
 - Applications are always connected
 - Development of secure systems is not a choice, but a must!
+
+## Web Application Security
+
+### Legal notes
+
+- Unauthorized breach of security systems is illegal
+- Unauthorized eavesdropping is illegal
+- Distribution or usage of "hacking tools" is illegal (which has however been relativized by judges)
+
+### Components of Web Environments
+
+- Web server (no business logic, static content)
+- App server (business logic, Tomcat etc.)
+- Databases
+- Middleware
+- LDAP
+- Reverse Proxies
+- Web Application Firewalls
+- Load Balancers
+- Firewalls
+
+### Targets
+
+- Browser
+- Transport
+- Web server
+- Web application
+- Backend
+- Network components
+- Partner connections (i.e. Sentry, Monitoring etc.)
+
+### Risks in the Layered Architecture
+
+- Client presentation layer: Validation
+- Browser: Browser sandboxing etc.
+- Encryption in transport
+- Server presentation layer: Input & output validation
+- Logging: Auditing
+- Error handling: Secure error escalation
+- All layers: Authorization & authentication checks
+- Encryption to database
+- Data protection in database
+
+### Methods to find Vulnerabilities
+
+- **Security audit**
+  - Checks if previously established security guidelines have been implemented
+  - Assessment of configuration
+- **Vulnerability assessment**
+  - Scans for known vulnerabilities
+  - Can point in directions, but not show concrete exploits
+- **Pentesting**
+  - Security audit and vulnerability assessment is included
+  - Shows how vulnerabilities can be exploited
+
+### Pentesting Process
+
+1. **Pre-Attack Phase**
+   1. Rules of engagement must be noted in a contract
+   2. Customer's requirements need to be queried
+   3. Enumeration
+      1. Passive: Enumerating without having access to client's network
+      2. Active: Scanning
+2. **Attack Phase**:
+   1. Perimeter breach
+   2. Access
+   3. Exploit/privilege escalation
+   4. Keeping access
+   5. Removing all traces
+3. **Post-Attack Phase**:
+   1. Restoring the pre-attack state
+   2. Writing the report
+   3. Posting recommendations on how to continue (i.e. fixing the vulnerabilities)
