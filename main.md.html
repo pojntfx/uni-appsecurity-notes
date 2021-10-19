@@ -22,7 +22,7 @@
       padding-top: 50px;
       padding-bottom: 50px;
       hyphens: auto;
-      word-wrap: break-word;
+      overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
     }
@@ -93,6 +93,7 @@
     pre code {
       padding: 0;
       overflow: visible;
+      overflow-wrap: normal;
     }
     .sourceCode {
      background-color: transparent;
@@ -197,6 +198,15 @@
 <li><a href="#balancing-security"><span class="toc-section-number">1.4.9</span> Balancing Security</a></li>
 <li><a href="#writing-secure-software"><span class="toc-section-number">1.4.10</span> Writing Secure Software</a></li>
 <li><a href="#finishing-thoughts"><span class="toc-section-number">1.4.11</span> Finishing Thoughts</a></li>
+</ul></li>
+<li><a href="#web-application-security"><span class="toc-section-number">1.5</span> Web Application Security</a>
+<ul>
+<li><a href="#legal-notes"><span class="toc-section-number">1.5.1</span> Legal notes</a></li>
+<li><a href="#components-of-web-environments"><span class="toc-section-number">1.5.2</span> Components of Web Environments</a></li>
+<li><a href="#targets"><span class="toc-section-number">1.5.3</span> Targets</a></li>
+<li><a href="#risks-in-the-layered-architecture"><span class="toc-section-number">1.5.4</span> Risks in the Layered Architecture</a></li>
+<li><a href="#methods-to-find-vulnerabilities"><span class="toc-section-number">1.5.5</span> Methods to find Vulnerabilities</a></li>
+<li><a href="#pentesting-process"><span class="toc-section-number">1.5.6</span> Pentesting Process</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -406,5 +416,91 @@
 <li>Applications are always connected</li>
 <li>Development of secure systems is not a choice, but a must!</li>
 </ul>
+<h2 data-number="1.5" id="web-application-security"><span class="header-section-number">1.5</span> Web Application Security</h2>
+<h3 data-number="1.5.1" id="legal-notes"><span class="header-section-number">1.5.1</span> Legal notes</h3>
+<ul>
+<li>Unauthorized breach of security systems is illegal</li>
+<li>Unauthorized eavesdropping is illegal</li>
+<li>Distribution or usage of “hacking tools” is illegal (which has however been relativized by judges)</li>
+</ul>
+<h3 data-number="1.5.2" id="components-of-web-environments"><span class="header-section-number">1.5.2</span> Components of Web Environments</h3>
+<ul>
+<li>Web server (no business logic, static content)</li>
+<li>App server (business logic, Tomcat etc.)</li>
+<li>Databases</li>
+<li>Middleware</li>
+<li>LDAP</li>
+<li>Reverse Proxies</li>
+<li>Web Application Firewalls</li>
+<li>Load Balancers</li>
+<li>Firewalls</li>
+</ul>
+<h3 data-number="1.5.3" id="targets"><span class="header-section-number">1.5.3</span> Targets</h3>
+<ul>
+<li>Browser</li>
+<li>Transport</li>
+<li>Web server</li>
+<li>Web application</li>
+<li>Backend</li>
+<li>Network components</li>
+<li>Partner connections (i.e. Sentry, Monitoring etc.)</li>
+</ul>
+<h3 data-number="1.5.4" id="risks-in-the-layered-architecture"><span class="header-section-number">1.5.4</span> Risks in the Layered Architecture</h3>
+<ul>
+<li>Client presentation layer: Validation</li>
+<li>Browser: Browser sandboxing etc.</li>
+<li>Encryption in transport</li>
+<li>Server presentation layer: Input &amp; output validation</li>
+<li>Logging: Auditing</li>
+<li>Error handling: Secure error escalation</li>
+<li>All layers: Authorization &amp; authentication checks</li>
+<li>Encryption to database</li>
+<li>Data protection in database</li>
+</ul>
+<h3 data-number="1.5.5" id="methods-to-find-vulnerabilities"><span class="header-section-number">1.5.5</span> Methods to find Vulnerabilities</h3>
+<ul>
+<li><strong>Security audit</strong>
+<ul>
+<li>Checks if previously established security guidelines have been implemented</li>
+<li>Assessment of configuration</li>
+</ul></li>
+<li><strong>Vulnerability assessment</strong>
+<ul>
+<li>Scans for known vulnerabilities</li>
+<li>Can point in directions, but not show concrete exploits</li>
+</ul></li>
+<li><strong>Pentesting</strong>
+<ul>
+<li>Security audit and vulnerability assessment is included</li>
+<li>Shows how vulnerabilities can be exploited</li>
+</ul></li>
+</ul>
+<h3 data-number="1.5.6" id="pentesting-process"><span class="header-section-number">1.5.6</span> Pentesting Process</h3>
+<ol type="1">
+<li><strong>Pre-Attack Phase</strong>
+<ol type="1">
+<li>Rules of engagement must be noted in a contract</li>
+<li>Customer’s requirements need to be queried</li>
+<li>Enumeration
+<ol type="1">
+<li>Passive: Enumerating without having access to client’s network</li>
+<li>Active: Scanning</li>
+</ol></li>
+</ol></li>
+<li><strong>Attack Phase</strong>:
+<ol type="1">
+<li>Perimeter breach</li>
+<li>Access</li>
+<li>Exploit/privilege escalation</li>
+<li>Keeping access</li>
+<li>Removing all traces</li>
+</ol></li>
+<li><strong>Post-Attack Phase</strong>:
+<ol type="1">
+<li>Restoring the pre-attack state</li>
+<li>Writing the report</li>
+<li>Posting recommendations on how to continue (i.e. fixing the vulnerabilities)</li>
+</ol></li>
+</ol>
 </body>
 </html>
