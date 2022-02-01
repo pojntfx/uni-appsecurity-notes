@@ -1,6 +1,0 @@
-Uni App Security Notes
-Notes for the Anwendungssicherheit (app security) course at HdM Stuttgart.
-© 2021 Felicitas Pojtinger under AGPL-3.0
-https://github.com/pojntfx/uni-appsecurity-notes
-https://github.com/pojntfx/uni-appsecurity-notes/releases/latest/download/all.zip
-🔐 Happy securing!
