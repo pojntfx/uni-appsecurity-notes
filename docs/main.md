@@ -1,8 +1,11 @@
-% Uni App Security Notes
-% Felix Pojtinger
-% \today
-\tableofcontents
-\newpage
+---
+author: [Felix Pojtinger]
+date: "2022-02-01"
+subject: "Uni App Security Notes"
+keywords: [secops, pentesting, appsec, it-security, hdm-stuttgart]
+subtitle: "Notes for the Anwendungssicherheit (app security) course at HdM Stuttgart"
+lang: "en"
+---
 
 # Uni App Security Notes
 
