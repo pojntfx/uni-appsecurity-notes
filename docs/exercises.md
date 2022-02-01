@@ -3,7 +3,7 @@ author: [Felicitas Pojtinger]
 date: "2022-02-01"
 subject: "Uni App Security Exercises"
 keywords: [secops, pentesting, appsec, it-security, hdm-stuttgart]
-subtitle: "Notes for the Anwendungssicherheit (app security) course at HdM Stuttgart"
+subtitle: "Exercises for the Anwendungssicherheit (app security) course at HdM Stuttgart"
 lang: "en"
 ---
 
@@ -23,12 +23,12 @@ If you like the study materials, a GitHub star is always appreciated :)
 
 ### License
 
-![AGPL-3.0 license badge](https://www.gnu.org/graphics/agplv3-155x51.png){ width=128px }
+<!-- ![AGPL-3.0 license badge](https://www.gnu.org/graphics/agplv3-155x51.png){ width=128px } -->
 
-Uni App Security Exercises (c) 2021 Felicitas Pojtinger and contributors
+Uni App Security Exercises (c) 2022 Felicitas Pojtinger and contributors
 
 SPDX-License-Identifier: AGPL-3.0
-\newpage "wird enorme Umsatzsteigerungen verzeichnen" ist eine Schlussfolgerung ohne Quelle; nur weil das mobile Einkaufen möglich wird, müssen diese nicht unbedingt in Umsatzsteigerungen resultieren
+\newpage
 
 ### Results
 
