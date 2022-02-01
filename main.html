@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Felicitas Pojtinger" />
+  <meta name="dcterms.date" content="2022-02-01" />
+  <meta name="keywords" content="secops, pentesting, appsec, it-security, hdm-stuttgart" />
   <title>Uni App Security Notes</title>
   <style>
     html {
@@ -22,7 +24,7 @@
       padding-top: 50px;
       padding-bottom: 50px;
       hyphens: auto;
-      overflow-wrap: break-word;
+      word-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
     }
@@ -93,7 +95,6 @@
     pre code {
       padding: 0;
       overflow: visible;
-      overflow-wrap: normal;
     }
     .sourceCode {
      background-color: transparent;
@@ -168,11 +169,11 @@
 <body>
 <header id="title-block-header">
 <h1 class="title">Uni App Security Notes</h1>
+<p class="subtitle">Notes for the Anwendungssicherheit (app security) course at HdM Stuttgart</p>
 <p class="author">Felicitas Pojtinger</p>
+<p class="date">2022-02-01</p>
 </header>
 <nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#uni-app-security-notes"><span class="toc-section-number">1</span> Uni App Security Notes</a>
 <ul>
 <li><a href="#introduction"><span class="toc-section-number">1.1</span> Introduction</a>
 <ul>
@@ -208,32 +209,38 @@
 <li><a href="#methods-to-find-vulnerabilities"><span class="toc-section-number">1.5.5</span> Methods to find Vulnerabilities</a></li>
 <li><a href="#pentesting-process"><span class="toc-section-number">1.5.6</span> Pentesting Process</a></li>
 </ul></li>
-</ul></li>
 </ul>
 </nav>
-<h1 data-number="1" id="uni-app-security-notes"><span class="header-section-number">1</span> Uni App Security Notes</h1>
-<h2 data-number="1.1" id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
-<h3 data-number="1.1.1" id="contributing"><span class="header-section-number">1.1.1</span> Contributing</h3>
+<section id="introduction" data-number="0.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Introduction</h2>
+<section id="contributing" data-number="0.1.1">
+<h3 data-number="1.1.1"><span class="header-section-number">1.1.1</span> Contributing</h3>
 <p>These study materials are heavily based on <a href="https://www.hdm-stuttgart.de/studierende/abteilungen/sprachenzentrum/kursangebot/kursangebot/block?sgname=Medieninformatik+%28Bachelor%2C+7+Semester%29&amp;blockname=Anwendungssicherheit&amp;sgblockID=2573375&amp;sgang=550033">professor Heuzeroth’s “Anwendungssicherheit” lecture at HdM Stuttgart</a>.</p>
 <p><strong>Found an error or have a suggestion?</strong> Please open an issue on GitHub (<a href="https://github.com/pojntfx/uni-appsecurity-notes">github.com/pojntfx/uni-appsecurity-notes</a>):</p>
 <figure>
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAADCElEQVR4nO2cTY6bQBBGXwWkLBvJB/BR2jeYI0U5Um4ABxqpWY7U6MuiuzGZJItJJEigWFi24UmFKNXPV2Wb+PAxffo4Aw455JBDDjnk0Dkhq0ePPVjMbGjfPVgM5nbB4xDzHNofipKkBEzWoxGQUid9LV7SSZL0I7SfeQ7tD801AGgMGWJajOmesS/ND8ysP848h3aD+nefDT7L4rebLKalh/mWDzTPocMhjeHNmAbQSPcbseI/uyeHPnK0GBEEzOvXIcH08tozDR1ihq1z/OP35NDfQGwrRjoR069e2gVRksZ//J4c+huoxIhNAJgGDEJG0z0DIVMjyBHmObQ7VGNETNSecwzadJoaAWLqVJsQjxFnhzZZQ1KJB3p6SYkWSqtvuEecHVpjRKemS1VxCkILHkpQ8od7xOkhakRQe9wlUNDp6RstneR6sXvEmaFSWRp0sqJGzTdZHBcTdBlYDELCCJ2r2JeBJL0ZhDcrH0c62QNgukvEtJhGFjvIPIcOUKjmAZhvgvXBT0PH86zFhMeIC0CbypJYiom86UhL6zHS1RevI04PVYVqumc0GZRAMb28thOPvky6LKbb/uY5tDu0zj6XXoQEzIsBPZqGLltMQ0si94zFcV/zHNodagpVyBt9suQPgkSddUBVJjxrnB1qD5mmU298Q7mJUzyrDPeIk0M/zj7rXKMplVW4lJTbpp17xEWg2KRLmM2epzWWpdvPpR2xxzHmObS/it12Iap2rVpC1EwC1GLCY8TZobWOgFZCVO3hqUy0/OFzjStATY1q863aYYTcNiVSu3BNLO4RF4CaIJmhqNhzX97ZI0hESUzDYeY5dFiv0ekpO7S4wapReIy4EFQedwKgkz1ms+12fsgwmfns8wLQdqpV1ynXFctQB1/lcM3yGtB7j6Dqk9uisipUraJwjzg19P5XfhBeTcy3zPSSe9W9qgGY+6y9zXNod+j9b7o0vXSq21ShnjMAi8JnnxeAfuo16opM60jHsCaM5BszV4DM/5nMIYcccsghhxz6Q+g7+waIDzMEkqIAAAAASUVORK5CYII=" width="150" alt="QR code to source repository" /><figcaption aria-hidden="true">QR code to source repository</figcaption>
 </figure>
 <p>If you like the study materials, a GitHub star is always appreciated :)</p>
-<h3 data-number="1.1.2" id="license"><span class="header-section-number">1.1.2</span> License</h3>
-<figure>
-<img src="data:image/png;base64,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" width="128" alt="AGPL-3.0 license badge" /><figcaption aria-hidden="true">AGPL-3.0 license badge</figcaption>
-</figure>
-<p>Uni App Security Notes (c) 2021 Felicitas Pojtinger and contributors</p>
+</section>
+<section id="license" data-number="0.1.2">
+<h3 data-number="1.1.2"><span class="header-section-number">1.1.2</span> License</h3>
+<!-- ![AGPL-3.0 license badge](https://www.gnu.org/graphics/agplv3-155x51.png){ width=128px } -->
+<p>Uni App Security Notes (c) 2022 Felicitas Pojtinger and contributors</p>
 <p>SPDX-License-Identifier: AGPL-3.0 </p>
-<h2 data-number="1.2" id="organization"><span class="header-section-number">1.2</span> Organization</h2>
+</section>
+</section>
+<section id="organization" data-number="0.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> Organization</h2>
 <ul>
 <li>60 Minutes of test at the end</li>
 <li>Will have practical examples</li>
 <li>Threat detection plays a fundamental role in tests</li>
 </ul>
-<h2 data-number="1.3" id="overview"><span class="header-section-number">1.3</span> Overview</h2>
-<h3 data-number="1.3.1" id="elements-of-a-secure-development-process"><span class="header-section-number">1.3.1</span> Elements of a Secure Development Process</h3>
+</section>
+<section id="overview" data-number="0.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span> Overview</h2>
+<section id="elements-of-a-secure-development-process" data-number="0.3.1">
+<h3 data-number="1.3.1"><span class="header-section-number">1.3.1</span> Elements of a Secure Development Process</h3>
 <p><strong>Primary purpose</strong>: Analysis of the data flow; data is both protected by the GDPR and represents value of the corportation</p>
 <ul>
 <li><strong>Requirements</strong>
@@ -277,20 +284,28 @@
 <li>→ <strong>Impact area of security incidents must be visible*</strong></li>
 </ul></li>
 </ul>
-<h3 data-number="1.3.2" id="support-hierarchy"><span class="header-section-number">1.3.2</span> Support Hierarchy</h3>
+</section>
+<section id="support-hierarchy" data-number="0.3.2">
+<h3 data-number="1.3.2"><span class="header-section-number">1.3.2</span> Support Hierarchy</h3>
 <ul>
 <li><strong>Level 1</strong>: Direct support with customers; call center, non-technical</li>
 <li><strong>Level 2</strong>: People who know about typical problems with the software</li>
 <li><strong>Level 3</strong>: Developers of the software</li>
 </ul>
-<h2 data-number="1.4" id="basics"><span class="header-section-number">1.4</span> Basics</h2>
-<h3 data-number="1.4.1" id="what-is-secure-software"><span class="header-section-number">1.4.1</span> What is Secure Software?</h3>
+</section>
+</section>
+<section id="basics" data-number="0.4">
+<h2 data-number="1.4"><span class="header-section-number">1.4</span> Basics</h2>
+<section id="what-is-secure-software" data-number="0.4.1">
+<h3 data-number="1.4.1"><span class="header-section-number">1.4.1</span> What is Secure Software?</h3>
 <ul>
 <li>Software which is protected against intentional attacks</li>
 <li>Every participant in the software development process should be interested in this objective</li>
 <li>Software must be hardened against all known attacks (and future, unknown attacks)</li>
 </ul>
-<h3 data-number="1.4.2" id="what-is-security"><span class="header-section-number">1.4.2</span> What is Security?</h3>
+</section>
+<section id="what-is-security" data-number="0.4.2">
+<h3 data-number="1.4.2"><span class="header-section-number">1.4.2</span> What is Security?</h3>
 <ul>
 <li><span class="math inline">Risk = \frac{Cost\ of\ breach}{Probability\ of\ breach}</span></li>
 <li>A system is protected against threats compromising valuable data using measures which lead to a reduced, accepted risk.</li>
@@ -305,7 +320,9 @@
 </ul></li>
 <li>If there are contractions between the security objectives (anonymity vs. accountability): The context defines which objectives dominate over others</li>
 </ul>
-<h3 data-number="1.4.3" id="cissp-domainscertificates"><span class="header-section-number">1.4.3</span> CISSP Domains/Certificates</h3>
+</section>
+<section id="cissp-domainscertificates" data-number="0.4.3">
+<h3 data-number="1.4.3"><span class="header-section-number">1.4.3</span> CISSP Domains/Certificates</h3>
 <ul>
 <li><strong>Security Engineering</strong>: Engineering and Management of Security</li>
 <li><strong>Security Assessment and Testing</strong>: Designing, Performing and Analyzing Security Testing</li>
@@ -313,7 +330,9 @@
 <li><strong>Software Development Security</strong>: Understanding, Applying and Enforcing Software Security</li>
 <li>→ This course strives for 80% of TPSSE compliance</li>
 </ul>
-<h3 data-number="1.4.4" id="why-security"><span class="header-section-number">1.4.4</span> Why Security?</h3>
+</section>
+<section id="why-security" data-number="0.4.4">
+<h3 data-number="1.4.4"><span class="header-section-number">1.4.4</span> Why Security?</h3>
 <ul>
 <li>Security is context dependent: On <code>localhost</code> and unprotected UNIX socket isn’t an issue, but forward it with <code>socat</code> and it becomes a massive security vulnerability!</li>
 <li>With every change every test needs to be run again (regression testing)</li>
@@ -322,7 +341,9 @@
 <li>Devices are more and more connected which reduces the need for physical access</li>
 <li>Extensible architectures</li>
 </ul>
-<h3 data-number="1.4.5" id="common-terms"><span class="header-section-number">1.4.5</span> Common Terms</h3>
+</section>
+<section id="common-terms" data-number="0.4.5">
+<h3 data-number="1.4.5"><span class="header-section-number">1.4.5</span> Common Terms</h3>
 <ul>
 <li>Exploit/Proof of Concept</li>
 <li>Attack</li>
@@ -338,7 +359,9 @@
 <li>Exposure can be countermeasured by a safeguard</li>
 <li>Safeguard directly affects threat agent</li>
 </ol>
-<h3 data-number="1.4.6" id="threat-agents"><span class="header-section-number">1.4.6</span> Threat Agents</h3>
+</section>
+<section id="threat-agents" data-number="0.4.6">
+<h3 data-number="1.4.6"><span class="header-section-number">1.4.6</span> Threat Agents</h3>
 <ul>
 <li>Virus (i.e. infection)</li>
 <li>Hacker (i.e. unauthorized access)</li>
@@ -349,7 +372,9 @@
 <li>Black hats (i.e. buffer overflows, DoS)</li>
 <li>Intruders (i.e. physically stealing drives)</li>
 </ul>
-<h3 data-number="1.4.7" id="researching-vulnerabilities"><span class="header-section-number">1.4.7</span> Researching Vulnerabilities</h3>
+</section>
+<section id="researching-vulnerabilities" data-number="0.4.7">
+<h3 data-number="1.4.7"><span class="header-section-number">1.4.7</span> Researching Vulnerabilities</h3>
 <ul>
 <li>Classifying vulnerabilities by severity (low, middle, high)</li>
 <li>Classifying vulnerabilities by exploit range (local or remote)</li>
@@ -357,7 +382,9 @@
 <li>Intents to find vulnerabilities before they can be exploited</li>
 <li>Intents to find countermeasures</li>
 </ul>
-<h3 data-number="1.4.8" id="cvss-metrics"><span class="header-section-number">1.4.8</span> CVSS Metrics</h3>
+</section>
+<section id="cvss-metrics" data-number="0.4.8">
+<h3 data-number="1.4.8"><span class="header-section-number">1.4.8</span> CVSS Metrics</h3>
 <p>Results in a number which can be used to classify the vulnerability.</p>
 <ul>
 <li><strong>Base Score Metrics</strong>
@@ -393,12 +420,16 @@
 </ul></li>
 </ul></li>
 </ul>
-<h3 data-number="1.4.9" id="balancing-security"><span class="header-section-number">1.4.9</span> Balancing Security</h3>
+</section>
+<section id="balancing-security" data-number="0.4.9">
+<h3 data-number="1.4.9"><span class="header-section-number">1.4.9</span> Balancing Security</h3>
 <ul>
 <li>Security is always a balance between functionality and usability</li>
 <li>Security often means to have restrictions in terms of features</li>
 </ul>
-<h3 data-number="1.4.10" id="writing-secure-software"><span class="header-section-number">1.4.10</span> Writing Secure Software</h3>
+</section>
+<section id="writing-secure-software" data-number="0.4.10">
+<h3 data-number="1.4.10"><span class="header-section-number">1.4.10</span> Writing Secure Software</h3>
 <ul>
 <li>Many sections
 <ul>
@@ -409,21 +440,29 @@
 </ul></li>
 <li>Time and money should be invested into all sections according to individual risk, not only into a singular section</li>
 </ul>
-<h3 data-number="1.4.11" id="finishing-thoughts"><span class="header-section-number">1.4.11</span> Finishing Thoughts</h3>
+</section>
+<section id="finishing-thoughts" data-number="0.4.11">
+<h3 data-number="1.4.11"><span class="header-section-number">1.4.11</span> Finishing Thoughts</h3>
 <ul>
 <li>Systems are only secure if all elements of the system are secure</li>
 <li>Perimeter and infrastructure security can not make the entire system secure</li>
 <li>Applications are always connected</li>
 <li>Development of secure systems is not a choice, but a must!</li>
 </ul>
-<h2 data-number="1.5" id="web-application-security"><span class="header-section-number">1.5</span> Web Application Security</h2>
-<h3 data-number="1.5.1" id="legal-notes"><span class="header-section-number">1.5.1</span> Legal notes</h3>
+</section>
+</section>
+<section id="web-application-security" data-number="0.5">
+<h2 data-number="1.5"><span class="header-section-number">1.5</span> Web Application Security</h2>
+<section id="legal-notes" data-number="0.5.1">
+<h3 data-number="1.5.1"><span class="header-section-number">1.5.1</span> Legal notes</h3>
 <ul>
 <li>Unauthorized breach of security systems is illegal</li>
 <li>Unauthorized eavesdropping is illegal</li>
 <li>Distribution or usage of “hacking tools” is illegal (which has however been relativized by judges)</li>
 </ul>
-<h3 data-number="1.5.2" id="components-of-web-environments"><span class="header-section-number">1.5.2</span> Components of Web Environments</h3>
+</section>
+<section id="components-of-web-environments" data-number="0.5.2">
+<h3 data-number="1.5.2"><span class="header-section-number">1.5.2</span> Components of Web Environments</h3>
 <ul>
 <li>Web server (no business logic, static content)</li>
 <li>App server (business logic, Tomcat etc.)</li>
@@ -435,7 +474,9 @@
 <li>Load Balancers</li>
 <li>Firewalls</li>
 </ul>
-<h3 data-number="1.5.3" id="targets"><span class="header-section-number">1.5.3</span> Targets</h3>
+</section>
+<section id="targets" data-number="0.5.3">
+<h3 data-number="1.5.3"><span class="header-section-number">1.5.3</span> Targets</h3>
 <ul>
 <li>Browser</li>
 <li>Transport</li>
@@ -445,7 +486,9 @@
 <li>Network components</li>
 <li>Partner connections (i.e. Sentry, Monitoring etc.)</li>
 </ul>
-<h3 data-number="1.5.4" id="risks-in-the-layered-architecture"><span class="header-section-number">1.5.4</span> Risks in the Layered Architecture</h3>
+</section>
+<section id="risks-in-the-layered-architecture" data-number="0.5.4">
+<h3 data-number="1.5.4"><span class="header-section-number">1.5.4</span> Risks in the Layered Architecture</h3>
 <ul>
 <li>Client presentation layer: Validation</li>
 <li>Browser: Browser sandboxing etc.</li>
@@ -457,7 +500,9 @@
 <li>Encryption to database</li>
 <li>Data protection in database</li>
 </ul>
-<h3 data-number="1.5.5" id="methods-to-find-vulnerabilities"><span class="header-section-number">1.5.5</span> Methods to find Vulnerabilities</h3>
+</section>
+<section id="methods-to-find-vulnerabilities" data-number="0.5.5">
+<h3 data-number="1.5.5"><span class="header-section-number">1.5.5</span> Methods to find Vulnerabilities</h3>
 <ul>
 <li><strong>Security audit</strong>
 <ul>
@@ -475,7 +520,9 @@
 <li>Shows how vulnerabilities can be exploited</li>
 </ul></li>
 </ul>
-<h3 data-number="1.5.6" id="pentesting-process"><span class="header-section-number">1.5.6</span> Pentesting Process</h3>
+</section>
+<section id="pentesting-process" data-number="0.5.6">
+<h3 data-number="1.5.6"><span class="header-section-number">1.5.6</span> Pentesting Process</h3>
 <ol type="1">
 <li><strong>Pre-Attack Phase</strong>
 <ol type="1">
@@ -502,5 +549,7 @@
 <li>Posting recommendations on how to continue (i.e. fixing the vulnerabilities)</li>
 </ol></li>
 </ol>
+</section>
+</section>
 </body>
 </html>

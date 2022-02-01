@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Uni App Security Notes</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Uni App Security Notes</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#overview"><span class="toc-section-number">1.1</span> Overview</a></li>
+<li><a href="#contributing"><span class="toc-section-number">1.2</span> Contributing</a></li>
+<li><a href="#license"><span class="toc-section-number">1.3</span> License</a></li>
+</ul>
+</nav>
+<p>Notes for the Anwendungssicherheit (app security) course at HdM Stuttgart.</p>
+<p><a href="https://github.com/pojntfx/uni-appsecurity-notes/actions/workflows/deliverance.yaml"><img src="data:image/svg+xml; charset=utf-8;base64,CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTUxIiBoZWlnaHQ9IjIwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0id29ya2Zsb3ctZmlsbCIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+CiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiM0NDRENTYiIG9mZnNldD0iMCUiPjwvc3RvcD4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzI0MjkyRSIgb2Zmc2V0PSIxMDAlIj48L3N0b3A+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJzdGF0ZS1maWxsIiB4MT0iNTAlIiB5MT0iMCUiIHgyPSI1MCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0Q3M0E0OSIgb2Zmc2V0PSIwJSI+PC9zdG9wPgogICAgICA8c3RvcCBzdG9wLWNvbG9yPSIjQ0IyNDMxIiBvZmZzZXQ9IjEwMCUiPjwvc3RvcD4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICA8ZyBmb250LWZhbWlseT0iJiMzOTtEZWphVnUgU2FucyYjMzk7LFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPgogICAgICA8cGF0aCBpZD0id29ya2Zsb3ctYmciIGQ9Ik0wLDMgQzAsMS4zNDMxIDEuMzU1MiwwIDMuMDI3MDI3MDMsMCBMMTA4LDAgTDEwOCwyMCBMMy4wMjcwMjcwMywyMCBDMS4zNTUyLDIwIDAsMTguNjU2OSAwLDE3IEwwLDMgWiIgZmlsbD0idXJsKCN3b3JrZmxvdy1maWxsKSIgZmlsbC1ydWxlPSJub256ZXJvIj48L3BhdGg+CiAgICAgIDx0ZXh0IGZpbGw9IiMwMTAxMDEiIGZpbGwtb3BhY2l0eT0iLjMiPgogICAgICAgIDx0c3BhbiB4PSIyMi4xOTgxOTgyIiB5PSIxNSI+RGVsaXZlcmFuY2UgQ0k8L3RzcGFuPgogICAgICA8L3RleHQ+CiAgICAgIDx0ZXh0IGZpbGw9IiNGRkZGRkYiPgogICAgICAgIDx0c3BhbiB4PSIyMi4xOTgxOTgyIiB5PSIxNCI+RGVsaXZlcmFuY2UgQ0k8L3RzcGFuPgogICAgICA8L3RleHQ+CiAgICA8L2c+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDgpIiBmb250LWZhbWlseT0iJiMzOTtEZWphVnUgU2FucyYjMzk7LFZlcmRhbmEsR2VuZXZhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiPgogICAgICA8cGF0aCBkPSJNMCAwaDQwLjQ3QzQxLjg2OSAwIDQzIDEuMzQzIDQzIDN2MTRjMCAxLjY1Ny0xLjEzMiAzLTIuNTMgM0gwVjB6IiBpZD0ic3RhdGUtYmciIGZpbGw9InVybCgjc3RhdGUtZmlsbCkiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICA8dGV4dCBmaWxsPSIjMDEwMTAxIiBmaWxsLW9wYWNpdHk9Ii4zIj4KICAgICAgICA8dHNwYW4geD0iNSIgeT0iMTUiPmZhaWxpbmc8L3RzcGFuPgogICAgICA8L3RleHQ+CiAgICAgIDx0ZXh0IGZpbGw9IiNGRkZGRkYiPgogICAgICAgIDx0c3BhbiB4PSI1IiB5PSIxNCI+ZmFpbGluZzwvdHNwYW4+CiAgICAgIDwvdGV4dD4KICAgIDwvZz4KICAgIDxwYXRoIGZpbGw9IiM5NTlEQTUiIGQ9Ik0xMSAzYy0zLjg2OCAwLTcgMy4xMzItNyA3YTYuOTk2IDYuOTk2IDAgMCAwIDQuNzg2IDYuNjQxYy4zNS4wNjIuNDgyLS4xNDguNDgyLS4zMzIgMC0uMTY2LS4wMS0uNzE4LS4wMS0xLjMwNC0xLjc1OC4zMjQtMi4yMTMtLjQyOS0yLjM1My0uODIyLS4wNzktLjIwMi0uNDItLjgyMy0uNzE3LS45OS0uMjQ1LS4xMy0uNTk1LS40NTQtLjAxLS40NjMuNTUyLS4wMDkuOTQ2LjUwOCAxLjA3Ny43MTguNjMgMS4wNTggMS42MzYuNzYgMi4wMzkuNTc3LjA2MS0uNDU1LjI0NS0uNzYxLjQ0Ni0uOTM2LTEuNTU3LS4xNzUtMy4xODUtLjc3OS0zLjE4NS0zLjQ1NiAwLS43NjIuMjcxLTEuMzkyLjcxOC0xLjg4Mi0uMDctLjE3NS0uMzE1LS44OTIuMDctMS44NTUgMCAwIC41ODYtLjE4MyAxLjkyNS43MThhNi41IDYuNSAwIDAgMSAxLjc1LS4yMzYgNi41IDYuNSAwIDAgMSAxLjc1LjIzNmMxLjMzOC0uOTEgMS45MjUtLjcxOCAxLjkyNS0uNzE4LjM4NS45NjMuMTQgMS42OC4wNyAxLjg1NS40NDYuNDkuNzE3IDEuMTEyLjcxNyAxLjg4MiAwIDIuNjg2LTEuNjM2IDMuMjgtMy4xOTQgMy40NTYuMjU0LjIxOS40NzMuNjM5LjQ3MyAxLjI5NSAwIC45MzYtLjAwOSAxLjY4OS0uMDA5IDEuOTI1IDAgLjE4NC4xMzEuNDAyLjQ4MS4zMzJBNy4wMTEgNy4wMTEgMCAwIDAgMTggMTBjMC0zLjg2Ny0zLjEzMy03LTctN3oiPjwvcGF0aD4KICA8L2c+Cjwvc3ZnPgoK" alt="Deliverance CI" /></a></p>
+<section id="overview" data-number="0.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Overview</h2>
+<p>You can <a href="https://pojntfx.github.io/uni-appsecurity-notes/">view the notes on GitHub pages</a>, <a href="https://github.com/pojntfx/uni-appsecurity-notes/releases/latest">download them from GitHub releases</a> or <a href="https://github.com/pojntfx/uni-appsecurity-notes">check out the source on GitHub</a>.</p>
+</section>
+<section id="contributing" data-number="0.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> Contributing</h2>
+<p>To contribute, please use the <a href="https://guides.github.com/introduction/flow/">GitHub flow</a> and follow our <a href="./CODE_OF_CONDUCT.md">Code of Conduct</a>.</p>
+<p>To build and open a note locally, run the following:</p>
+<pre class="shell"><code>$ git clone https://github.com/pojntfx/uni-appsecurity-notes.git
+$ cd uni-appsecurity-notes
+$ ./configure
+$ make depend
+$ make dev-pdf/your-note # Use Bash completion to list available targets
+# In another terminal
+$ make open-pdf/your-note # Use Bash completion to list available targets</code></pre>
+<p>The note should now be opened. Whenever you change a source file, it will automatically be re-compiled.</p>
+</section>
+<section id="license" data-number="0.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span> License</h2>
+<p>Uni App Security Notes (c) 2022 Felicitas Pojtinger and contributors</p>
+<p>SPDX-License-Identifier: AGPL-3.0</p>
+</section>
+</body>
+</html>

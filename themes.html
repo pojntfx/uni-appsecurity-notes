@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Felicitas Pojtinger" />
+  <meta name="dcterms.date" content="2022-02-01" />
+  <meta name="keywords" content="secops, pentesting, appsec, it-security, hdm-stuttgart" />
+  <title>Uni App Security Themes</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Uni App Security Themes</h1>
+<p class="subtitle">Themes for the Anwendungssicherheit (app security) course at HdM Stuttgart</p>
+<p class="author">Felicitas Pojtinger</p>
+<p class="date">2022-02-01</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#introduction"><span class="toc-section-number">1.1</span> Introduction</a>
+<ul>
+<li><a href="#contributing"><span class="toc-section-number">1.1.1</span> Contributing</a></li>
+<li><a href="#license"><span class="toc-section-number">1.1.2</span> License</a></li>
+<li><a href="#themes"><span class="toc-section-number">1.1.3</span> Themes</a></li>
+</ul></li>
+</ul>
+</nav>
+<section id="introduction" data-number="0.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Introduction</h2>
+<section id="contributing" data-number="0.1.1">
+<h3 data-number="1.1.1"><span class="header-section-number">1.1.1</span> Contributing</h3>
+<p>These study materials are heavily based on <a href="https://www.hdm-stuttgart.de/studierende/abteilungen/sprachenzentrum/kursangebot/kursangebot/block?sgname=Medieninformatik+%28Bachelor%2C+7+Semester%29&amp;blockname=Anwendungssicherheit&amp;sgblockID=2573375&amp;sgang=550033">professor Heuzeroth’s “Anwendungssicherheit” lecture at HdM Stuttgart</a>.</p>
+<p><strong>Found an error or have a suggestion?</strong> Please open an issue on GitHub (<a href="https://github.com/pojntfx/uni-appsecurity-notes">github.com/pojntfx/uni-appsecurity-notes</a>):</p>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAADCElEQVR4nO2cTY6bQBBGXwWkLBvJB/BR2jeYI0U5Um4ABxqpWY7U6MuiuzGZJItJJEigWFi24UmFKNXPV2Wb+PAxffo4Aw455JBDDjnk0Dkhq0ePPVjMbGjfPVgM5nbB4xDzHNofipKkBEzWoxGQUid9LV7SSZL0I7SfeQ7tD801AGgMGWJajOmesS/ND8ysP848h3aD+nefDT7L4rebLKalh/mWDzTPocMhjeHNmAbQSPcbseI/uyeHPnK0GBEEzOvXIcH08tozDR1ihq1z/OP35NDfQGwrRjoR069e2gVRksZ//J4c+huoxIhNAJgGDEJG0z0DIVMjyBHmObQ7VGNETNSecwzadJoaAWLqVJsQjxFnhzZZQ1KJB3p6SYkWSqtvuEecHVpjRKemS1VxCkILHkpQ8od7xOkhakRQe9wlUNDp6RstneR6sXvEmaFSWRp0sqJGzTdZHBcTdBlYDELCCJ2r2JeBJL0ZhDcrH0c62QNgukvEtJhGFjvIPIcOUKjmAZhvgvXBT0PH86zFhMeIC0CbypJYiom86UhL6zHS1RevI04PVYVqumc0GZRAMb28thOPvky6LKbb/uY5tDu0zj6XXoQEzIsBPZqGLltMQ0si94zFcV/zHNodagpVyBt9suQPgkSddUBVJjxrnB1qD5mmU298Q7mJUzyrDPeIk0M/zj7rXKMplVW4lJTbpp17xEWg2KRLmM2epzWWpdvPpR2xxzHmObS/it12Iap2rVpC1EwC1GLCY8TZobWOgFZCVO3hqUy0/OFzjStATY1q863aYYTcNiVSu3BNLO4RF4CaIJmhqNhzX97ZI0hESUzDYeY5dFiv0ekpO7S4wapReIy4EFQedwKgkz1ms+12fsgwmfns8wLQdqpV1ynXFctQB1/lcM3yGtB7j6Dqk9uisipUraJwjzg19P5XfhBeTcy3zPSSe9W9qgGY+6y9zXNod+j9b7o0vXSq21ShnjMAi8JnnxeAfuo16opM60jHsCaM5BszV4DM/5nMIYcccsghhxz6Q+g7+waIDzMEkqIAAAAASUVORK5CYII=" width="150" alt="QR code to source repository" /><figcaption aria-hidden="true">QR code to source repository</figcaption>
+</figure>
+<p>If you like the study materials, a GitHub star is always appreciated :)</p>
+</section>
+<section id="license" data-number="0.1.2">
+<h3 data-number="1.1.2"><span class="header-section-number">1.1.2</span> License</h3>
+<!-- ![AGPL-3.0 license badge](https://www.gnu.org/graphics/agplv3-155x51.png){ width=128px } -->
+<p>Uni App Security Themes (c) 2022 Felicitas Pojtinger and contributors</p>
+<p>SPDX-License-Identifier: AGPL-3.0 </p>
+</section>
+<section id="themes" data-number="0.1.3">
+<h3 data-number="1.1.3"><span class="header-section-number">1.1.3</span> Themes</h3>
+<ul>
+<li>Basics and Security Objectives (8 points)
+<ul>
+<li>CIA triad</li>
+<li>Definition of security &amp; safety</li>
+<li>Definition of software security &amp; safety</li>
+<li>How do software security issues occur, and what are their causes?</li>
+<li>What are risks, threats and vulnerabilities? (from the basics slides)</li>
+<li>Ranking risks</li>
+<li>Contradictions in software security (security vs vulernability)</li>
+</ul></li>
+<li>Secure Development Process (4 points): Data flow diagram (see STRIDE) and modelled system are given, analyze the secure development principles</li>
+<li>Buffer Overflow (10 points):
+<ul>
+<li>Screenshots from SL-Mail exploit are given, explain step by step (with parameters and tool names)</li>
+<li>Include buffer overflow cheat sheet</li>
+<li>Unique string search vs binary search</li>
+</ul></li>
+<li>Security of Web Applications (13 points):
+<ul>
+<li>OWASP Top 10 (names, explanation and example)</li>
+<li>2x: Bad example code is given, find, describe and execute possible attacks, show countermeasures</li>
+<li>Attack vector is given, execute attack</li>
+<li>Explain countermeasure to one of the OWASP 2021 attacks</li>
+</ul></li>
+<li>Secure Coding (10 points):
+<ul>
+<li>Explanation of program is given, find and fix the vulnerability</li>
+</ul></li>
+<li>Authentication and Authorization (5 points):
+<ul>
+<li>Authentication vs Authorization</li>
+<li>Methods of authentication (knowledge, ownership or attributes)</li>
+<li>What are OAuth2 refresh &amp; access tokens?</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</body>
+</html>
