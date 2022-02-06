@@ -1,3 +1,9 @@
+commit 14e23a6d6f1ab606f28e317a2617b517cf04a7d6
+Author: Felicitas Pojtinger <felicitas@pojtinger.com>
+Date:   Sun Feb 6 23:11:49 2022 +0100
+
+    feat: Add link to @JakWai01's notes
+
 commit ed2e7dfe603a717344df8db35b27e89f63019267
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Feb 1 16:25:04 2022 +0100

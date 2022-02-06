@@ -31,6 +31,8 @@ Felicitas Pojtinger
 
 Introduction
 
+  Please check out Jakob’s notes for more detailed study materials!
+
 Contributing
 
 These study materials are heavily based on professor Heuzeroth’s
@@ -44,6 +46,8 @@ Found an error or have a suggestion? Please open an issue on GitHub
 If you like the study materials, a GitHub star is always appreciated :)
 
 License
+
+[AGPL-3.0 license badge]
 
 Uni App Security Notes (c) 2022 Felicitas Pojtinger and contributors
 
