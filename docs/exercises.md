@@ -11,6 +11,8 @@ lang: "en"
 
 ## Introduction
 
+> Please check out [Jakob's notes](https://github.com/JakWai01/application-security) for more detailed study materials!
+
 ### Contributing
 
 These study materials are heavily based on [professor Heuzeroth's "Anwendungssicherheit" lecture at HdM Stuttgart](https://www.hdm-stuttgart.de/studierende/abteilungen/sprachenzentrum/kursangebot/kursangebot/block?sgname=Medieninformatik+%28Bachelor%2C+7+Semester%29&blockname=Anwendungssicherheit&sgblockID=2573375&sgang=550033).
@@ -23,7 +25,7 @@ If you like the study materials, a GitHub star is always appreciated :)
 
 ### License
 
-<!-- ![AGPL-3.0 license badge](https://www.gnu.org/graphics/agplv3-155x51.png){ width=128px } -->
+![AGPL-3.0 license badge](https://www.gnu.org/graphics/agplv3-155x51.png){ width=128px }
 
 Uni App Security Exercises (c) 2022 Felicitas Pojtinger and contributors
 

@@ -23,7 +23,7 @@ If you like the study materials, a GitHub star is always appreciated :)
 
 ### License
 
-<!-- ![AGPL-3.0 license badge](https://www.gnu.org/graphics/agplv3-155x51.png){ width=128px } -->
+![AGPL-3.0 license badge](https://www.gnu.org/graphics/agplv3-155x51.png){ width=128px }
 
 Uni App Security Themes (c) 2022 Felicitas Pojtinger and contributors
 
@@ -31,6 +31,8 @@ SPDX-License-Identifier: AGPL-3.0
 \newpage
 
 ### Themes
+
+> Please check out [Jakob's notes](https://github.com/JakWai01/application-security) for more detailed study materials!
 
 - Basics and Security Objectives (8 points)
   - CIA triad
