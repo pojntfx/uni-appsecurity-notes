@@ -28,6 +28,6 @@ The note should now be opened. Whenever you change a source file, it will automa
 
 ## License
 
-Uni App Security Notes (c) 2022 Felix Pojtinger and contributors
+Uni App Security Notes (c) 2022 Felicitas Pojtinger and contributors
 
 SPDX-License-Identifier: AGPL-3.0
