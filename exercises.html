@@ -24,7 +24,7 @@
       padding-top: 50px;
       padding-bottom: 50px;
       hyphens: auto;
-      word-wrap: break-word;
+      overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
     }
@@ -32,6 +32,9 @@
       body {
         font-size: 0.9em;
         padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
       }
     }
     @media print {
@@ -95,6 +98,7 @@
     pre code {
       padding: 0;
       overflow: visible;
+      overflow-wrap: normal;
     }
     .sourceCode {
      background-color: transparent;
@@ -136,6 +140,12 @@
     #TOC li {
       list-style: none;
     }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
     #TOC a:not(:hover) {
       text-decoration: none;
     }
@@ -146,62 +156,79 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">Uni App Security Exercises</h1>
-<p class="subtitle">Exercises for the Anwendungssicherheit (app security) course at HdM Stuttgart</p>
+<p class="subtitle">Exercises for the Anwendungssicherheit (app
+security) course at HdM Stuttgart</p>
 <p class="author">Felicitas Pojtinger</p>
 <p class="date">2022-02-01</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#introduction"><span class="toc-section-number">1.1</span> Introduction</a>
+<li><a href="#introduction"><span class="toc-section-number">1.1</span>
+Introduction</a>
 <ul>
 <li><a href="#contributing"><span class="toc-section-number">1.1.1</span> Contributing</a></li>
-<li><a href="#license"><span class="toc-section-number">1.1.2</span> License</a></li>
-<li><a href="#results"><span class="toc-section-number">1.1.3</span> Results</a></li>
+<li><a href="#license"><span class="toc-section-number">1.1.2</span>
+License</a></li>
+<li><a href="#results"><span class="toc-section-number">1.1.3</span>
+Results</a></li>
 </ul></li>
 </ul>
 </nav>
 <section id="introduction" data-number="0.1">
-<h2 data-number="1.1"><span class="header-section-number">1.1</span> Introduction</h2>
+<h2 data-number="1.1"><span class="header-section-number">1.1</span>
+Introduction</h2>
 <blockquote>
-<p>Please check out <a href="https://github.com/JakWai01/application-security">Jakob’s notes</a> for more detailed study materials!</p>
+<p>Please check out <a href="https://github.com/JakWai01/application-security">Jakob’s
+notes</a> for more detailed study materials!</p>
 </blockquote>
 <section id="contributing" data-number="0.1.1">
-<h3 data-number="1.1.1"><span class="header-section-number">1.1.1</span> Contributing</h3>
-<p>These study materials are heavily based on <a href="https://www.hdm-stuttgart.de/studierende/abteilungen/sprachenzentrum/kursangebot/kursangebot/block?sgname=Medieninformatik+%28Bachelor%2C+7+Semester%29&amp;blockname=Anwendungssicherheit&amp;sgblockID=2573375&amp;sgang=550033">professor Heuzeroth’s “Anwendungssicherheit” lecture at HdM Stuttgart</a>.</p>
-<p><strong>Found an error or have a suggestion?</strong> Please open an issue on GitHub (<a href="https://github.com/pojntfx/uni-appsecurity-notes">github.com/pojntfx/uni-appsecurity-notes</a>):</p>
+<h3 data-number="1.1.1"><span class="header-section-number">1.1.1</span>
+Contributing</h3>
+<p>These study materials are heavily based on <a href="https://www.hdm-stuttgart.de/studierende/abteilungen/sprachenzentrum/kursangebot/kursangebot/block?sgname=Medieninformatik+%28Bachelor%2C+7+Semester%29&amp;blockname=Anwendungssicherheit&amp;sgblockID=2573375&amp;sgang=550033">professor
+Heuzeroth’s “Anwendungssicherheit” lecture at HdM Stuttgart</a>.</p>
+<p><strong>Found an error or have a suggestion?</strong> Please open an
+issue on GitHub (<a href="https://github.com/pojntfx/uni-appsecurity-notes">github.com/pojntfx/uni-appsecurity-notes</a>):</p>
 <figure>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAADCElEQVR4nO2cTY6bQBBGXwWkLBvJB/BR2jeYI0U5Um4ABxqpWY7U6MuiuzGZJItJJEigWFi24UmFKNXPV2Wb+PAxffo4Aw455JBDDjnk0Dkhq0ePPVjMbGjfPVgM5nbB4xDzHNofipKkBEzWoxGQUid9LV7SSZL0I7SfeQ7tD801AGgMGWJajOmesS/ND8ysP848h3aD+nefDT7L4rebLKalh/mWDzTPocMhjeHNmAbQSPcbseI/uyeHPnK0GBEEzOvXIcH08tozDR1ihq1z/OP35NDfQGwrRjoR069e2gVRksZ//J4c+huoxIhNAJgGDEJG0z0DIVMjyBHmObQ7VGNETNSecwzadJoaAWLqVJsQjxFnhzZZQ1KJB3p6SYkWSqtvuEecHVpjRKemS1VxCkILHkpQ8od7xOkhakRQe9wlUNDp6RstneR6sXvEmaFSWRp0sqJGzTdZHBcTdBlYDELCCJ2r2JeBJL0ZhDcrH0c62QNgukvEtJhGFjvIPIcOUKjmAZhvgvXBT0PH86zFhMeIC0CbypJYiom86UhL6zHS1RevI04PVYVqumc0GZRAMb28thOPvky6LKbb/uY5tDu0zj6XXoQEzIsBPZqGLltMQ0si94zFcV/zHNodagpVyBt9suQPgkSddUBVJjxrnB1qD5mmU298Q7mJUzyrDPeIk0M/zj7rXKMplVW4lJTbpp17xEWg2KRLmM2epzWWpdvPpR2xxzHmObS/it12Iap2rVpC1EwC1GLCY8TZobWOgFZCVO3hqUy0/OFzjStATY1q863aYYTcNiVSu3BNLO4RF4CaIJmhqNhzX97ZI0hESUzDYeY5dFiv0ekpO7S4wapReIy4EFQedwKgkz1ms+12fsgwmfns8wLQdqpV1ynXFctQB1/lcM3yGtB7j6Dqk9uisipUraJwjzg19P5XfhBeTcy3zPSSe9W9qgGY+6y9zXNod+j9b7o0vXSq21ShnjMAi8JnnxeAfuo16opM60jHsCaM5BszV4DM/5nMIYcccsghhxz6Q+g7+waIDzMEkqIAAAAASUVORK5CYII=" width="150" alt="QR code to source repository" /><figcaption aria-hidden="true">QR code to source repository</figcaption>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAQAAAAAefbjOAAADCElEQVR4nO2cTY6bQBBGXwWkLBvJB/BR2jeYI0U5Um4ABxqpWY7U6MuiuzGZJItJJEigWFi24UmFKNXPV2Wb+PAxffo4Aw455JBDDjnk0Dkhq0ePPVjMbGjfPVgM5nbB4xDzHNofipKkBEzWoxGQUid9LV7SSZL0I7SfeQ7tD801AGgMGWJajOmesS/ND8ysP848h3aD+nefDT7L4rebLKalh/mWDzTPocMhjeHNmAbQSPcbseI/uyeHPnK0GBEEzOvXIcH08tozDR1ihq1z/OP35NDfQGwrRjoR069e2gVRksZ//J4c+huoxIhNAJgGDEJG0z0DIVMjyBHmObQ7VGNETNSecwzadJoaAWLqVJsQjxFnhzZZQ1KJB3p6SYkWSqtvuEecHVpjRKemS1VxCkILHkpQ8od7xOkhakRQe9wlUNDp6RstneR6sXvEmaFSWRp0sqJGzTdZHBcTdBlYDELCCJ2r2JeBJL0ZhDcrH0c62QNgukvEtJhGFjvIPIcOUKjmAZhvgvXBT0PH86zFhMeIC0CbypJYiom86UhL6zHS1RevI04PVYVqumc0GZRAMb28thOPvky6LKbb/uY5tDu0zj6XXoQEzIsBPZqGLltMQ0si94zFcV/zHNodagpVyBt9suQPgkSddUBVJjxrnB1qD5mmU298Q7mJUzyrDPeIk0M/zj7rXKMplVW4lJTbpp17xEWg2KRLmM2epzWWpdvPpR2xxzHmObS/it12Iap2rVpC1EwC1GLCY8TZobWOgFZCVO3hqUy0/OFzjStATY1q863aYYTcNiVSu3BNLO4RF4CaIJmhqNhzX97ZI0hESUzDYeY5dFiv0ekpO7S4wapReIy4EFQedwKgkz1ms+12fsgwmfns8wLQdqpV1ynXFctQB1/lcM3yGtB7j6Dqk9uisipUraJwjzg19P5XfhBeTcy3zPSSe9W9qgGY+6y9zXNod+j9b7o0vXSq21ShnjMAi8JnnxeAfuo16opM60jHsCaM5BszV4DM/5nMIYcccsghhxz6Q+g7+waIDzMEkqIAAAAASUVORK5CYII=" width="150" alt="QR code to source repository" />
+<figcaption aria-hidden="true">QR code to source repository</figcaption>
 </figure>
-<p>If you like the study materials, a GitHub star is always appreciated :)</p>
+<p>If you like the study materials, a GitHub star is always appreciated
+:)</p>
 </section>
 <section id="license" data-number="0.1.2">
-<h3 data-number="1.1.2"><span class="header-section-number">1.1.2</span> License</h3>
+<h3 data-number="1.1.2"><span class="header-section-number">1.1.2</span>
+License</h3>
 <figure>
-<img src="data:image/png;base64,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" width="128" alt="AGPL-3.0 license badge" /><figcaption aria-hidden="true">AGPL-3.0 license badge</figcaption>
+<img src="data:image/png;base64,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" width="128" alt="AGPL-3.0 license badge" />
+<figcaption aria-hidden="true">AGPL-3.0 license badge</figcaption>
 </figure>
-<p>Uni App Security Exercises (c) 2022 Felicitas Pojtinger and contributors</p>
+<p>Uni App Security Exercises (c) 2022 Felicitas Pojtinger and
+contributors</p>
 <p>SPDX-License-Identifier: AGPL-3.0 </p>
 </section>
 <section id="results" data-number="0.1.3">
-<h3 data-number="1.1.3"><span class="header-section-number">1.1.3</span> Results</h3>
+<h3 data-number="1.1.3"><span class="header-section-number">1.1.3</span>
+Results</h3>
 <section id="übung-1" data-number="0.1.3.1">
 <h4 data-number="1.1.3.1"><span class="header-section-number">1.1.3.1</span> Übung 1</h4>
 <p><strong>Was ist sichere Software?</strong></p>
 <ul>
-<li>Software, welche gegen bewusst durchgeführte Angriffe geschützt ist</li>
-<li>Software, welche gegen bekannte und unbekannte Angriffe abgesichert ist</li>
+<li>Software, welche gegen bewusst durchgeführte Angriffe geschützt
+ist</li>
+<li>Software, welche gegen bekannte und unbekannte Angriffe abgesichert
+ist</li>
 </ul>
-<p><strong>Wodurch ist der Begriff der Informationssicherheit (engl. security) charakterisiert? Nennen Sie dazu auch die drei grundlegenden Sicherheitskriterien sowie mindestens zwei weitere.</strong></p>
+<p><strong>Wodurch ist der Begriff der Informationssicherheit (engl.
+security) charakterisiert? Nennen Sie dazu auch die drei grundlegenden
+Sicherheitskriterien sowie mindestens zwei weitere.</strong></p>
 <ul>
 <li>Security hat zentral den Begriff Risiko</li>
-<li>Ein gewisses, kontextabhängiges Risiko wird akzeptiert (i.e. in Kernkraftwerken wird ein sehr geringes Risiko akzeptiert)</li>
+<li>Ein gewisses, kontextabhängiges Risiko wird akzeptiert (i.e. in
+Kernkraftwerken wird ein sehr geringes Risiko akzeptiert)</li>
 <li>Sicherheitskriterien:
 <ul>
 <li>Confidentiality</li>
@@ -210,45 +237,60 @@
 <li>Non-Repudiation</li>
 <li>Privacy</li>
 </ul></li>
-<li>Es gibt zwischen den Sicherheitskriterien fast immer Spannungen (i.e. Non-Repudiation vs. Privacy)</li>
-<li>“A system is protected against threats compromising valuable data using measures which lead to a reduced, accepted risk.”</li>
+<li>Es gibt zwischen den Sicherheitskriterien fast immer Spannungen
+(i.e. Non-Repudiation vs. Privacy)</li>
+<li>“A system is protected against threats compromising valuable data
+using measures which lead to a reduced, accepted risk.”</li>
 </ul>
-<p><strong>Wodurch unterscheidet sich dieser Begriff (security) von der Funktionssicherheit (engl. safety)?</strong></p>
+<p><strong>Wodurch unterscheidet sich dieser Begriff (security) von der
+Funktionssicherheit (engl. safety)?</strong></p>
 <ul>
-<li>Security ist der Schutz eines Systems vor der Umgebung, Safety ist der Schutz der Umgebung vor einem System</li>
+<li>Security ist der Schutz eines Systems vor der Umgebung, Safety ist
+der Schutz der Umgebung vor einem System</li>
 </ul>
-<p><strong>Warum muss man sich überhaupt mit IT- und Informationssicherheit beschäftigen?</strong></p>
+<p><strong>Warum muss man sich überhaupt mit IT- und
+Informationssicherheit beschäftigen?</strong></p>
 <ul>
 <li>Typischerweise ~30 Fehler pro 1000 Zeilen Code</li>
 <li>Anwendungen werden zunehmend komplexer</li>
-<li>Geräte (i.e. IoT) werden immer mehr verbunden (“Das S in IoT steht für Security!”)</li>
-<li>Gewisse Architekturen (i.e. Erweiterung des Systems zur Laufzeit) stellen neue Risiken dar</li>
+<li>Geräte (i.e. IoT) werden immer mehr verbunden (“Das S in IoT steht
+für Security!”)</li>
+<li>Gewisse Architekturen (i.e. Erweiterung des Systems zur Laufzeit)
+stellen neue Risiken dar</li>
 </ul>
-<p><strong>Was ist der Unterschied zwischen einem Exploit und einem Proof-of-Concept (PoC)?</strong></p>
+<p><strong>Was ist der Unterschied zwischen einem Exploit und einem
+Proof-of-Concept (PoC)?</strong></p>
 <ul>
-<li>Proof-of-Concept: Ein Konzept eines Exploits, welches z.B. der Demonstration einer Schwachstelle dient - ohne Schaden anzurichten</li>
-<li>Exploit: I.e. Software, welche bewusst eine Schwachstelle ausnutzt</li>
-<li>Temporal Score Metrics/Exploit Code Maturity bewertet z.B. einen Proof-of-Concept geringer als einen funktionieren Exploit</li>
+<li>Proof-of-Concept: Ein Konzept eines Exploits, welches z.B. der
+Demonstration einer Schwachstelle dient - ohne Schaden anzurichten</li>
+<li>Exploit: I.e. Software, welche bewusst eine Schwachstelle
+ausnutzt</li>
+<li>Temporal Score Metrics/Exploit Code Maturity bewertet z.B. einen
+Proof-of-Concept geringer als einen funktionieren Exploit</li>
 </ul>
-<p><strong>Nennen Sie drei Beispiele für „Threat Agents&quot;.</strong></p>
+<p><strong>Nennen Sie drei Beispiele für „Threat Agents”.</strong></p>
 <ul>
 <li>Virus</li>
 <li>Hacker</li>
 <li>Nutzer</li>
 </ul>
-<p><strong>Wo können Sie sich über aktuelle Bedrohungen informieren?</strong></p>
+<p><strong>Wo können Sie sich über aktuelle Bedrohungen
+informieren?</strong></p>
 <ul>
 <li>MITRE CVE</li>
 <li>Google Project Zero</li>
 <li>OWASP Top 10</li>
 </ul>
-<p><strong>Welches Vorgehen empfiehlt sich zur Entwicklung sicherer Software?</strong></p>
+<p><strong>Welches Vorgehen empfiehlt sich zur Entwicklung sicherer
+Software?</strong></p>
 <ul>
-<li>Während der Entwicklung MITRE CWE beachten (i.e. Input-Validation usw.)</li>
+<li>Während der Entwicklung MITRE CWE beachten (i.e. Input-Validation
+usw.)</li>
 <li>Entwicklungsprozess absichern (supply chain security)</li>
 <li>Security-Reviews durchführen</li>
 <li>Pentests durchführen</li>
-<li>Geld und Zeit in mehrere Bereiche je nach Risko investieren, nicht nur auf einen einzigen Bereich fokusieren</li>
+<li>Geld und Zeit in mehrere Bereiche je nach Risko investieren, nicht
+nur auf einen einzigen Bereich fokusieren</li>
 </ul>
 </section>
 </section>
