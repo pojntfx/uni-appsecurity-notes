@@ -1,76 +1,70 @@
-commit dfbb1619ab8e9ce9c9bf5cb3a0748cc64693bb98
-Author: Felicitas Pojtinger <felicitas@pojtinger.com>
-Date:   Fri Jun 24 18:54:34 2022 +0200
-
-    chore: Update personal info
-
-commit 14e23a6d6f1ab606f28e317a2617b517cf04a7d6
+commit 355b63588788fd939adea8d211acfed78ac87d25
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Sun Feb 6 23:11:49 2022 +0100
 
     feat: Add link to @JakWai01's notes
 
-commit ed2e7dfe603a717344df8db35b27e89f63019267
+commit 6773107db3595072460fcc30e30fb2b9a46529ad
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Feb 1 16:25:04 2022 +0100
 
     feat: Add themes
 
-commit 27ced53d2c103e4f30539bbbd40a81278851f5d3
+commit b12d43f7eb1386cf8a38813985bbbc65be4a3e7f
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Feb 1 15:30:37 2022 +0100
 
     build: Switch to Deliverance
 
-commit aae2456f69a628b5de3b2a8cf23aec689dc3ef04
+commit f303d7a32d4986e017d7211d14066271527bc3ce
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Oct 19 17:49:26 2021 +0200
 
     docs: Add first notes on web app security
 
-commit 03e4ad7cb2502cba71ee6a97b6c22cba68d79339
+commit 075b8285b866393dbfd124218e97363d111c0eab
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Oct 12 13:09:48 2021 +0200
 
     feat: Add feedback on exercises
 
-commit 5b16d3192fb00b640c79ab2d6f7c7f51a4058e1a
+commit 715a55af098291c24a1dd80dee6632cb8cc1b210
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Oct 12 12:54:36 2021 +0200
 
     refactor: Rename research results to exercises
 
-commit 7844a9877b76102ab8cbbe567963f98a36fd7355
+commit eb5137cf15401a24fc816290e3883a015d336339
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Oct 12 12:53:45 2021 +0200
 
     feat: Add initial research results
 
-commit 6a32d0ae37ecab1dae0f55a3178d3480d4115626
+commit d147c6741a320a3a62d709e3ccee3590f92e227f
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Oct 12 12:29:30 2021 +0200
 
     feat: Add rest of overview section
 
-commit 3442bda03d01f11e8c3f66bf01a43e18fd666998
+commit 6343163402c4087a9555f90512c87010627f2bb5
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Oct 5 13:15:25 2021 +0200
 
     feat: Add start of basics section
 
-commit 722898f89b465a14f9fc6df184fcdf4f3b3e36bf
+commit de52d7a42b49eeacbf008297ef77241e6623aa25
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Oct 5 11:22:14 2021 +0200
 
     feat: Add overview chapter
 
-commit 10323273fb8805e31d58f70feffd8c64f593af7f
+commit 0ee6ebaa7109a17675edd6637326e8685caceea4
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Oct 5 10:16:18 2021 +0200
 
     feat: Add boilerplate
 
-commit 07d4d98c5d678e814b1b29cc3adf2e4fd2544e20
+commit 8ba7a10aa0653b1a61d76341adb98d2831014f8b
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Tue Oct 5 10:06:29 2021 +0200
 
