@@ -1,3 +1,9 @@
+commit d534af47d8bb8d536fd893dfc170e83e07076776
+Author: Felicitas Pojtinger <felicitas@pojtinger.com>
+Date:   Fri May 5 01:00:43 2023 +0200
+
+    fix: Add content write permission for Deliverance CI/CD
+
 commit 355b63588788fd939adea8d211acfed78ac87d25
 Author: Felicitas Pojtinger <felicitas@pojtinger.com>
 Date:   Sun Feb 6 23:11:49 2022 +0100
